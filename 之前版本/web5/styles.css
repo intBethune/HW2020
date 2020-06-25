@@ -1,0 +1,71 @@
+body {
+    display: flex;
+    justify-content: center;
+}
+
+.todo--panel{
+    width: 35em;
+    margin-top: 7em;
+
+    min-height: 25em;
+    border: 1px solid #eeeeee ;
+    box-shadow: 5px 4px 9px #64615f;
+  }  
+
+  .todo--editor{
+      padding: 5px 20px;
+      display: flex;
+  }
+
+  .todo--editor input {
+      flex-grow: 1;
+      font-size: 1.2em;
+      padding: 2px 5px;
+    } 
+
+    .todo--items {
+        padding: 5px 20px;
+    }
+
+    .todo--items > .task {
+        display: flex;
+        align-items: center;
+    }
+
+    .todo--items .ctrlbar > button {
+        border: none;
+        background: none;
+        color: blue;
+        cursor: pointer;
+    } 
+
+    .todo--items .ctrlbar > button:disabled {
+        border: none;
+        background: none;
+        color:gray;
+    } 
+
+    .todo--items .ctrlbar > button:disabled:hover {
+        font-weight: unset;
+    } 
+
+    .todo--items .ctrlbar > button:hover {
+        font-weight: bolder;
+        color: crimson;
+    } 
+
+    .todo--items > .task > label {
+        flex-grow: 1;
+    }
+    
+    .todo--items > .task > input {
+        width: 1.5em;
+        height: 1.5em;
+    }
+
+  .task.done > label {
+      text-decoration: line-through;
+    }
+   .task.im > label {
+       background-color: aqua;
+   }
