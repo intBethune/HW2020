@@ -72,6 +72,29 @@ function renderTaskItems() {
     }
     itemEl.append(doneEL);
 
+    let importantEL = document.createElement("button");
+  if (tasks[i].im) {
+    importantEL.innerText = "⭐";
+  } else {
+    importantEL.innerText = "☆";
+  }
+
+
+  importantEL.onclick = () => {
+    console.log("add click");
+    
+    if (tasks[i].im) {
+      tasks[i].im = false;
+      renderTaskItems();
+    } else {
+      tasks[i].im = true;
+      renderTaskItems();
+    };
+    
+    renderTaskItems();
+  } 
+  itemEl.append(importantEL);
+
     let titleEL = document.createElement("label");
     titleEL.innerText = task.title;
     itemEl.append(titleEL);
@@ -88,28 +111,7 @@ function renderTaskCtrlBar(task, taskIdx, itemEl) {
   let ctrbarEL = document.createElement("div");
   ctrbarEL.className = "ctrlbar";
 
-  let importantEL = document.createElement("button");
-  if (tasks[taskIdx].im) {
-    importantEL.innerText = "⭐";
-  } else {
-    importantEL.innerText = "☆";
-  }
-
-
-  importantEL.onclick = () => {
-    console.log("add click");
-    
-    if (tasks[taskIdx].im) {
-      tasks[taskIdx].im = false;
-      renderTaskItems();
-    } else {
-      tasks[taskIdx].im = true;
-      renderTaskItems();
-    };
-    
-    renderTaskItems();
-  } 
-  ctrbarEL.append(importantEL);
+  
 
 
 

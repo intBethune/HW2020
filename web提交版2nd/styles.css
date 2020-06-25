@@ -67,6 +67,20 @@ body {
   .task.done > label {
       text-decoration: line-through;
     }
-   .tasks.im > label {
+  /* .tasks.im > label {
        background-color: aqua;
+   }*/
+   .task > label {
+    font-family:"SimHei"；
+    font-we
    }
+
+   .task > button {
+    border: none;
+    background: none;
+    color: #111120;
+    cursor: pointer;
+    padding: 0.5em;
+    text-align: center;
+     } 
+ 
